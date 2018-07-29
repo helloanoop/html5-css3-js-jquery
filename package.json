@@ -1,0 +1,12 @@
+{
+  "name": "html5-css3-js-jquery",
+  "version": "1.0.0",
+  "description": "HTML5, CSS3, JS & jQuery examples",
+  "dependencies": {
+    "body-parser": "^1.9.0",
+    "cors": "^2.4.2",
+    "express": "^4.9.7",
+    "http-server": "^0.11.1",
+    "lodash": "^4.17.5"
+  }
+}
