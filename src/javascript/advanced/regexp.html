@@ -1,0 +1,23 @@
+<script>
+// Ref: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions
+
+// using a regular expression literal
+var re = /ab+c/;
+
+// calling the constructor function of the RegExp object
+var re = new RegExp('ab+c');
+
+// Methods
+// exec()  Tests for a match in a string. Returns the first match
+// test()  Tests for a match in a string. Returns true or false
+
+var str = "A drop of ink may make a million think";
+console.log(str.search( /a/i )); // 0 (the first position)
+
+var str = "Fame is the thirst of youth";
+var result = str.match( /fame/i );
+
+console.log( result[0] );    // Fame (the match)
+console.log( result.index ); // 0 (at the zero position)
+console.log( result.input ); // "Fame is the thirst of youth" (the string)
+</script>

@@ -1,0 +1,37 @@
+<script>
+  function speak(p1, p2) {
+    console.log(this.fullName);
+    console.log(p1);
+    console.log(p2);
+  }
+
+  var xyz = {
+    fullName: 'DEF'
+  }
+
+  var bindedSpeak = speak.bind(xyz);
+  bindedSpeak();
+
+  speak.call(xyz, 1, 2);
+  speak.apply(xyz, [3, 4]);
+
+  var Cat = function() {
+    this.fullName = 'Fluffy';
+    this.speak = speak;
+
+    function speak() {
+      console.log(this.fullName);
+    }
+  };
+
+  var cat = new Cat();
+  cat.speak();
+
+  var Dog = function() {
+    this.fullName = 'Spike';
+    this.speak = speak;
+  };
+
+  var dog = new Dog();
+  dog.speak();
+<script>

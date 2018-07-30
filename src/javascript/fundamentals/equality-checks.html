@@ -1,0 +1,34 @@
+<script>
+  var x = 5;         // assign the value 5 to x
+  var y = 2;         // assign the value 2 to y
+  var z = 5;         // assign the value 5 to x
+
+  console.log(x == y);  // prints false
+  console.log(x == z);  // prints true
+
+  console.log("1"   ==  1 );           // true
+  console.log("1"  ===  1 );          // false - Strict Comparison
+  console.log(1   == '1');           // true
+  console.log(0   == false);         // true
+  console.log(0   == null );           // false*/
+
+  console.log(0   == undefined);     // false
+  console.log("undefined  == undefined");   // true
+  console.log(undefined  == undefined);   // true
+
+  console.log('foo' === 'foo')
+  var a = 'foo';
+  var a = new String('foo');
+  var b = new String('foo');
+
+  // false as a and b are type Object and reference different objects
+  console.log(a == b);
+
+  // false as a and b are type Object and reference different objects
+  console.log(a === b);
+
+  // true as a and 'foo' are of different type and, the Object (a)
+  // is converted to String 'foo' before comparison
+  console.log(a == 'foo');
+
+</script>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>AJAX Example</title>
+    <script>
+      var xhttp;
+        xhttp=new XMLHttpRequest();
+        xhttp.onreadystatechange = function() {
+          console.log('called');
+          if (this.readyState == 4 && this.status == 200) {
+              console.log(this.responseText);
+          }
+        };
+        var url = 'https://jsonplaceholder.typicode.com/users';
+        xhttp.open("GET", url, true);
+        xhttp.send();
+        console.log('After call!');
+    </script>
+  </head>
+  <body>
+        
+  </body>
+</html>

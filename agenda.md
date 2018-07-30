@@ -30,15 +30,6 @@ Agenda of the training
   - JSON parse, stringify
   - Creating User defined objects
 
-* Browser Object Model
-  - Window
-  - Document
-  - Form
-  - Frame
-  - Navigator
-  - History
-  - Location
-
 * Document Object Model
   - getElementsByTagName
   - getElementById

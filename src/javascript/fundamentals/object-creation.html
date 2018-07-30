@@ -1,0 +1,32 @@
+<script>
+  //The format is JSON
+  //JavaScript Object Notation
+  /*var book = {
+    title: 'Pro Angular 4',
+    author: 'Adam Fredman',
+    price: 2500
+  };*/
+
+  var book = {};
+  book.title = 'Pro Angular 4';
+  book.author = 'Adam Fredman';
+  book.price = 500;
+
+  //DOT Notation -> objectname.propertyname
+  console.log(book.title);
+
+  //Assign a value
+  book.title = 'Pro Angular 4.3';
+  console.log(book.publisher); //Gives undefined
+  book.publisher = 'apress'; //Incremental definition;
+
+  var person = {
+    'first-name' : 'William',
+    'last-name' : 'Shakespeare'
+  };
+  //brackets notation
+  //used to display the value of the properties those
+  //do not satisfy the naming conventions or contain
+  //special characters
+  console.log(person['first-name']);
+</script>

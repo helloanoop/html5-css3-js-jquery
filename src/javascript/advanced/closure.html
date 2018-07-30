@@ -1,0 +1,13 @@
+<script>
+  function makeAdder(num) {
+    return function (x) {
+      return num + x;
+    };
+  };
+
+  var adder2 = makeAdder(2);
+  var adder3 = makeAdder(3);
+
+  console.log(adder2(10));
+  console.log(adder3(10));
+</script>

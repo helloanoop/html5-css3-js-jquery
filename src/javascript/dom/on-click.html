@@ -1,0 +1,15 @@
+<button id ="my-button">Click Me!</button>
+
+<div id = 'my-div'style="width:100px;height:100px;background-color: red">
+  Hello World
+</div>
+
+<script>
+  var myButton = document.getElementById("my-button");
+  var myDiv = document.getElementById("my-div");
+
+  myButton.onclick = function() {
+    myDiv.style.backgroundColor = 'green';
+    console.log("You clicked me!");
+  }
+</script>
