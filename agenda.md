@@ -108,8 +108,6 @@ Agenda of the training
   - Showing and hiding elements gradually
   - Fading elements into and out of existence
   - Sliding elements up and down
-  - Stopping animations
-  - Creating custom animations
 
 * Talk to the server with Ajax
   - Introduction to Ajax
