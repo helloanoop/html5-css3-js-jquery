@@ -9,8 +9,14 @@ yarn install
 
 ### Set Proxy
 ```bash
+(General)
 npm config set proxy http-proxy-server-URL:proxy-port
 npm config set https-proxy https-proxy-server-URL:proxy-port
+
+(For Oracle)
+npm config set proxy http://www-proxy.us.oracle.com:80
+npm config set https-proxy https://www-proxy.us.oracle.com:443 
+git config --global http.proxy "www-proxy.us.oracle.com:80"
 ```
 
 ### References
