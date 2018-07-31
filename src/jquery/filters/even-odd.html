@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>jQuery Selectors - Filters</title>
+    <script src="scripts/jquery-2.2.4.min.js" type="text/javascript"></script>
+    <script>
+      $(document).ready(function(){
+        $('tr:even').css('background-color','lightgray');
+        $('tr:odd').css('background-color','yellow');
+
+        //alert($('.c1:checked').length);
+      });
+    </script>
+  </head>
+  <body>
+    <table border="1">
+      <thead>
+        <tr>
+          <th>Title</th>
+          <th>ISBN</th>
+          <th>Price</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr>
+            <td>Pro jQuery</td>
+            <td>978-81-322-1470</td>
+            <td>1225</td>
+          </tr>
+          <tr>
+            <td>Learning ECMAScript 6</td>
+            <td>978-1-78588-444-3</td>
+            <td>799</td>
+          </tr>
+          <tr>
+            <td>Speaking JavaScript</td>
+            <td>978-93-5110-532-9</td>
+            <td>999</td>
+          </tr>
+        </tbody>
+    </table>
+
+    <input type = "checkbox" class = 'c1'/>First <br/>
+    <input type = "checkbox" class = 'c1' checked/>Second <br/>
+    <input type = "checkbox" class = 'c1'/>Third <br/>
+
+  </body>
+</html>

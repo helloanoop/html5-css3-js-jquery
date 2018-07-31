@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>jQuery - Basic</title>
+      <link href="styles/bootstrap.min.css" rel="stylesheet">
+      <script src="scripts/jquery-2.2.4.min.js" type="text/javascript"></script>
+      <script src="scripts/bootstrap.min.js" type="text/javascript"></script>
+      <script>
+         $(document).ready(function(){
+            
+            $('#btnAdd').click(function(){
+               var htmlString = "<tr>";
+               htmlString += "<td>Sidney</td>";
+               htmlString += "<td>Sheldon</td>";
+               htmlString += "<td><input type=button class='edit' value='Edit'></td>";
+               htmlString += "</tr>";
+               $("#authors").append(htmlString);
+            }) 
+
+           /*$('.edit').click(function(){
+               alert('Clicked Edit');
+            });*/
+            
+            $('#authors').on("click",".edit",function(){
+               alert('Clicked Edit!');
+            });
+         })
+      </script>
+   </head>
+   <body>
+      <table id="authors" class="table table-stripped">
+         <tr>
+            <td>William</td>
+            <td>Shakespeare</td>
+            <td><input type="button" class="edit" value="Edit">
+         </tr>
+         <tr>
+            <td>Dan</td>
+            <td>Brown</td>
+            <td><input type="button" class="edit" value="Edit">
+         </tr>
+      </table>
+
+      <br/>
+
+      <input type="button" value="Add Row" id="btnAdd"/>
+      
+   </body>
+</html>
+
+
+<!--
+Notes:
+bind  ->  Register a function to handle one or more event
+event.preventDefault -> Supress the default action for an event
+unbind -> Remove and event handler from an element
+on -> Automatically apply an event handler function to elements as they are added to the document
+
+-->

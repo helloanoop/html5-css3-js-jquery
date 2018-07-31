@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>jQuery Selectors</title>
+    <script src="scripts/jquery-2.2.4.min.js" type="text/javascript"></script>
+    <style>
+      .highlight{
+        color:Blue;
+      }
+    </style>
+    <script>
+      $(document).ready(function(){
+        $('#my-para').css('color', 'red');
+        $('.iamthere').css('color', 'blue');
+      });
+    </script>
+  </head>
+  <body>
+    <div class="notme">
+      <p class="iamthere" id="my-para">I am there in para</p>
+    </div>
+    <div class="iamthere anothercss">div class="myClass"</div>
+    <span class="iamthere">span class="myClass"</span>
+
+    <div class="some">I am content <span class='highlight'>highlighted text</span></div>
+  </body>
+</html>

@@ -1,0 +1,10 @@
+<input type="button" id="btn" onclick="alert('Obtrusive')" />
+
+<input type="button" id="btn" />
+
+<script>
+var el = document.getElementById('btn');
+el.onclick = function(){
+  alert('Unobtrusive');
+};
+</script>

@@ -129,3 +129,79 @@ Agenda of the training
   - Dialog
   - ProgressBar
   - Tabs
+
+## Day 3
+### Session 1 <sup>1h 0m</sup>
+* HTML5 Overview
+  - History of HTML5
+  - The HTML5 vision
+  - WHATWG and W3C specifications
+  - What is part of HTML5?
+
+* HTML5 Markup
+  - HTML5 page structure
+  - HTML5 DOCTYPE
+  - HTML5 markup 
+  - Structural elements
+  - Semantic elements
+  - Deprecated elements
+  - HTML5 and CSS
+
+### Session 2 <sup>2h 15m</sup>
+* HTML5 Forms
+  - HTML5 form elements
+  - Building and using HTML5 forms
+
+* HTML5 Audio and Video
+  - The audio and video elements
+  - Understanding audio and video 
+  - Audio and video containers
+  - Audio and video codecs
+
+* Overview of the HTML5 APIs
+  - Overview of the HTML5 APIs
+  - Common building blocks
+  - Programming HTML5
+
+### Session 3 <sup>1h 30m</sup>
+* HTML5 Canvas and SVG
+  - Overview 
+  - Canvas vs. SVG
+  - Canvas coordinates
+  - Context
+  - Pixel data
+
+### Session 4 <sup>1h 45m</sup>
+* CSS3
+  - New CSS3 selectors
+  - Borders
+  - Rounded corners
+  - Drop shadows
+  - Backgrounds
+  - Text effects
+  - Adding shadows to text
+
+* Colours and Opacity
+  - RGBA and HSL values and alpha channel opacity
+  - Setting opacity
+
+## Day 4
+### Session 1 <sup>1h 0m</sup>
+* Transitions and transforms
+  - Using transitions
+  - Using transforms
+* UI Properties
+  - Appearance
+  - Box-sizing
+  - Resize
+  - Outline-offset
+* Generated Content Properties
+  - Content
+  - Counter-increment
+* Media Queries
+
+### Session 2 <sup>2h 15m</sup>
+### Session 3 <sup>1h 30m</sup>
+### Session 4 <sup>1h 45m</sup>
+
+

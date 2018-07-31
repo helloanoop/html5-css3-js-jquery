@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>jQuery Selectors</title>
+    <script src="scripts/jquery-2.2.4.min.js" type="text/javascript"></script>
+    <script>
+      $(document).ready(function(){
+        //Finds all inputs that don't have the name 'fruit' and appends text to the span next to it
+        $("input[name!='fruit']" ).next().append( "<b> not fruit</b>" );
+      });
+    </script>
+  </head>
+  <body>
+    <div>
+      <input type="radio" name="fruit" value="Cherry">
+      <span>name is fruit</span>
+    </div>
+    <div>
+      <input type="radio" value="Butterscotch">
+      <span>no name</span>
+    </div>
+    <div>
+      <input type="radio" name="vegetable" value="Radish">
+      <span>name is vegetable</span>
+    </div>
+  </body>
+</html>

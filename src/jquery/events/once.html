@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>jQuery - Basic</title>
+      <link href="styles/bootstrap.min.css" rel="stylesheet">
+      <script src="scripts/jquery-2.2.4.min.js" type="text/javascript"></script>
+      <script src="scripts/bootstrap.min.js" type="text/javascript"></script>
+      <script>
+         $(document).ready(function(){
+
+         var handledCount = 0;
+           function handleMouseEnter(e){
+              $(this).css("border","thick solid red");
+           }
+
+           function handleMouseExit(e){
+               $(this).css("border", "");
+           }
+
+           $("img").bind("mouseenter" , handleMouseEnter).once("mouseout", handleMouseExit);
+         });
+      </script>
+   </head>
+   <body>
+      <h1>Jacqui's Flower Shop</h1>
+      <form method="post">
+         <div class="row">
+            <div class="col-md-3" >
+               <img src="aster.jpg" width="150" height="150" /><label for="aster">Aster:</label>
+               <input name="aster" value="0" required/>
+            </div>
+            <div class="col-md-3">
+               <img src="daffodil.jpg" width="150" height="150"/><label for="daffodil">Daffodil:</label>
+               <input name="daffodil" value="0" required/>
+            </div>
+            <div class="col-md-3">
+               <img src="rose.jpg" width="150" height="150"/><label for="rose">Rose:</label>
+               <input name="rose" value="0" required/>
+            </div>
+         </div>
+         <br/>
+         <div class="row">
+            <div class="col-md-3">
+               <img src="peony.jpg" width="150" height="150"/><label for="peony">Peony:</label>
+               <input name="peony" value="0" required/>
+            </div>
+            <div class="col-md-3">
+               <img src="primula.jpg" width="150" height="150"/><label for="primula">Primula:</label>
+               <input name="primula" value="0" required/>
+            </div>
+            <div class="col-md-3">
+               <img src="snowdrop.jpg" width="150" height="150"/><label for="snowdrop">Snow drop:</label>
+               <input name="snowdrop" value="0" required/>
+            </div>
+         </div>
+         <br/>
+         <input type="button" name="placeorder" class="btn btn-default" value="Place Order" />
+      </form>
+   </body>
+</html>
+
+
+<!--
+Notes:
+bind  ->  Register a function to handle one or more event
+event.preventDefault -> Supress the default action for an event
+unbind -> Remove and event handler from an element
+on -> Automatically apply an event handler function to elements as they are added to the document
+
+-->

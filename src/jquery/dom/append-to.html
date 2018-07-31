@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>jQuery Selectors - DOM Manipluation</title>
+    <script src="scripts/jquery-2.2.4.min.js" type="text/javascript"></script>
+    <script>
+      $(document).ready(function(){
+         //$('.letter').append('<span>Letter</span>');
+         $('<span>Letter</span>').appendTo('.letter');
+      });
+    </script>
+  </head>
+  <body>
+    <p class="letter">News </p>
+    <p class="letter">Appointment </p>
+    <p class="letter">Leave </p>
+  </body>
+</html>

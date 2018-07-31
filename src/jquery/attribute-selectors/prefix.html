@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>jQuery Selectors</title>
+    <script src="scripts/jquery-2.2.4.min.js" type="text/javascript"></script>
+    <script>
+      $(document).ready(function(){
+        //Selects elements that have the specified attribute with a
+        //value either equal to a given string or starting with
+        //that string followed by a hyphen (-)
+        $('td[lang|="en"]').css('color','red');
+      });
+    </script>
+  </head>
+  <body>
+    <table>
+      <tr>
+        <th>English</th>
+        <th>French</th>
+      </tr>
+      <tr>
+        <td lang='en'>Apple</td>
+        <td lang='en-US'>pomme</td>
+      </tr>
+      <tr>
+        <td lang='en-UK'>Grapes</td>
+        <td lang='fr'>les raisins</td>
+      </tr>
+      <tr>
+        <td lang='english'>Cherry</td>
+        <td lang='fr'>cerise</td>
+      </tr>
+    </table>
+  </body>
+</html>

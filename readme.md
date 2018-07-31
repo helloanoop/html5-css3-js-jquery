@@ -13,7 +13,10 @@ npm config set proxy http-proxy-server-URL:proxy-port
 npm config set https-proxy https-proxy-server-URL:proxy-port
 ```
 
-## License
+### References
+[Jquery UI Examples on Github](https://github.com/tjvantoll/jquery-ui-in-action-demos)
+
+### License
 
 [MIT](LICENSE)
 

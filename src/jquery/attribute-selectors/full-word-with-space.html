@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>jQuery Selectors</title>
+    <script src="scripts/jquery-2.2.4.min.js" type="text/javascript"></script>
+    <script>
+      $(document).ready(function(){
+        //Finds all inputs with a name attribute that contains the word 'man' and sets the value with given text
+        $('input[name~="man"]' ).val('I have "man" as a separate word in my name!');
+      });
+    </script>
+  </head>
+  <body>
+    <input name="post man">
+    <input name="policeman">
+    <input name="spider man">
+    <input name="shaktimaan">
+  </body>
+</html>
