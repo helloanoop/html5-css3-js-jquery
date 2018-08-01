@@ -108,6 +108,7 @@ Agenda of the training
   - Showing and hiding elements gradually
   - Fading elements into and out of existence
   - Sliding elements up and down
+  - Custom Animations
 
 * Talk to the server with Ajax
   - Introduction to Ajax
@@ -203,3 +204,33 @@ Agenda of the training
 ### Session 4 <sup>1h 45m</sup>
 
 
+HTML
+Basics od the Web
+  - URLS
+  - Website
+  - Web Pages
+  - Web Browsers
+  - ISP
+
+Introduction to HTML
+  - What is HTML
+  - Structure of a HTML PAGE
+HTML Tags
+  - Headings
+  - Paragraphs
+  - Line Breaks
+  - Links
+  - Lists
+  - Images
+
+  - Text Formatting
+  - Horizontal Rule
+  - Tables
+  - Entities
+  - Forms
+
+
+HTML 5
+Semantic Tags
+Additional Input Controls – Forms
+Video & Audio

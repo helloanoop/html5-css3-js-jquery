@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Unordered List</title>
+    <style type="text/css">
+      ol.my-list{
+        list-style-type: upper-alpha;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Unordered List</h2>
+    <ul>
+      <li>First item</li>
+      <li>Second item</li>
+      <li>Third item</li>
+    </ul>
+
+    <!-- Nesting -->
+    <ul class="my-list">
+      <li>first item</li>
+      <li>second item
+        <ol>
+          <li>second item first subitem</li>
+          <li>second item second subitem</li>
+          <li>second item third subitem</li>
+        </ol>
+      </li>
+      <li>third item</li>
+    </ul>
+  </body>
+</html>
