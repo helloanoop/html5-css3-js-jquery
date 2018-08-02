@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang = "en">
+   <head>
+      <meta charset = "utf-8">
+      <title>jQuery UI effect Example</title>
+      <link href = "https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css"
+         rel = "stylesheet">
+      <script src = "https://code.jquery.com/jquery-1.10.2.js"></script>
+      <script src = "https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+      
+      <!-- CSS -->
+      <style>
+         #box-1 {
+            height: 100px;
+            width: 100px;
+            background: #b9cd6d;
+         }
+      </style>
+      
+      <script>
+         $(document).ready(function() {
+            $('#box-1').click(function() {
+               $( "#box-1" ).effect( "shake", {
+                  times: 10,
+                  distance: 100
+               }, 3000, function() {
+                  $( this ).css( "background", "#cccccc" );
+               });
+            });
+         });
+      </script>
+   </head>
+   
+   <body>
+      <div id = "box-1">Click On Me</div>
+   </body>
+</html>
