@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+   <body>
+    <h3>Session Storage</h3>
+    <button>Click Me</button>
+    <label>No Of Clicks: </label>
+    <span id="count"></span>
+   </body>
+   <script type="text/javascript">
+      var count = sessionStorage.getItem("count");
+      if(!count) count = 0;
+      $("#count").text(count);
+
+      $('button').click(function() {
+        count++;
+        sessionStorage.setItem("count", count);
+        $("#count").text(count);
+      });
+   </script>
+</html>
