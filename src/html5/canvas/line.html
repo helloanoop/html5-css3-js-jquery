@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+   <body>
+      <canvas id = "canvas"></canvas>
+   </body>
+   <script>
+      function draw() {
+        var canvas = document.getElementById('canvas');
+        if (canvas.getContext) {
+           var ctx = canvas.getContext('2d');
+
+          ctx.beginPath();
+          ctx.moveTo(100, 150);
+          ctx.lineTo(450, 50);
+          ctx.stroke();
+        }
+      }
+
+      draw();
+   </script>
+</html>

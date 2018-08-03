@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+   <style>
+      #mycanvas{border:1px solid red;}
+   </style>
+   <body>
+      <canvas id = "canvas"></canvas>
+   </body>
+   <script>
+      function draw() {
+        var canvas = document.getElementById('canvas');
+        if (canvas.getContext) {
+          var ctx = canvas.getContext('2d');
+
+          ctx.beginPath();
+          ctx.moveTo(75, 50);
+          ctx.lineTo(100, 75);
+          ctx.lineTo(100, 25);
+          ctx.fill();
+        }
+      }
+
+      draw();
+   </script>
+</html>
