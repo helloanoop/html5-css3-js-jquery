@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <style>
+    #grad1 {
+      height: 100px;
+      background: linear-gradient(pink,green);
+
+      /* A gradient tilted 45 degrees, starting blue and finishing red */
+      background: linear-gradient(45deg, blue, red);
+
+      /* A gradient going from the bottom right to the top left corner, starting blue and finishing red */
+      background: linear-gradient(to left top, blue, red);
+
+      /* A gradient going from the bottom to top, starting blue, turning green at 40% of its length,and finishing red */
+      background: linear-gradient(0deg, blue, green 40%, red);
+    }
+
+
+    #grad2 {
+      height: 100px;
+      width: 100px;
+      background: radial-gradient(#e66465, #9198e5);
+      background: radial-gradient(closest-side, #3f87a6, #ebf8e1, #f69d3c);
+      background: radial-gradient(circle at 100%, #333, #333 50%, #eee 75%, #333 75%);
+      background: radial-gradient(ellipse at top, #e66465, transparent), radial-gradient(ellipse at bottom, #4d9f0c, transparent);
+    }
+  </style>
+  <body>
+    <div id="grad1"></div>
+    <div id="grad2"></div>
+  </body>
+</html>

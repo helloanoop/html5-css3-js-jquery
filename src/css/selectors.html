@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+  <style type="text/css">
+  /*Type Selectors*/
+  h1 {
+     color: #36CFFF; 
+  }
+  form{
+    margin-top: 25px;
+  }
+
+  /*The Universal Selectors*/
+  * { 
+    color: green;
+  }
+
+  /*The Descendant Selectors*/
+  section label{
+    color: orange; 
+  }
+
+  /*The class Selectors*/
+  .purple {
+    color: purple; 
+  }
+
+  /*The id Selectors*/
+  #awesome{
+    background-color: blue;
+    color: white;
+  }
+
+  /*The Child Selectors*/
+  section > p{
+    text-decoration: underline;
+  }
+
+  /*The Attribute Selectors*/
+  input[type = "text"]{
+    background-color: grey;
+  }
+
+  /*Grouping Selectors*/
+  div h4, div h5, div h6{
+    color: orange;
+  }
+
+  </style>
+
+  <body>
+    <h1>This is a heading</h1>
+    <p>This is a paragraph</p>
+    <section>
+      <label>This is a label within a section</label>
+      <p>I am a child of section</p>
+      <div>
+        <p>I am a grandchild of section</p>
+      </div>
+    </section>
+    <div class="purple">I am purple</div>
+    <div id="awesome">I have been styled using id</div>
+
+    <form>
+      <label>Username</label>
+      <input type="text">
+
+      <label>Password</label>
+      <input type="password">
+    </form>
+
+    <div>
+      <h4>All of us have same color</h4>
+      <h5>All of us have same color</h5>
+      <h6>All of us have same color</h6>
+    </div>
+  </body>
+</html>

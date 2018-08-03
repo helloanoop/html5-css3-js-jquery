@@ -8,8 +8,16 @@
          var worker = new Worker('bigLoop.js');
          
          worker.onmessage = function (event) {
-            alert("Completed " + event.data + "iterations" );
+            console.log("Recieved end of task from web worker");
+            // alert("Completed " + event.data + "iterations" );
          };
+
+         worker.postMessage([1, 2, 3, 4]);
+         console.log('Message posted to worker');
+
+         setTimeout(function() {
+            worker.postMessage([5, 6, 7, 8]);
+         }, 2000);
          
          function sayHello() {
             alert("Hello sir...." );

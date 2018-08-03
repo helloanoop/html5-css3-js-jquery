@@ -12,9 +12,9 @@
       if (canvas.getContext) {   
          var ctx = canvas.getContext('2d');   
          // drawing code here   
-         ctx.fillRect(25,25,100,100);
-         ctx.clearRect(45,45,60,60);
-         ctx.strokeRect(50,50,50,50);
+         ctx.beginPath();
+         ctx.arc(75, 75, 50, 0, Math.PI, false); // Outer circle
+         ctx.stroke();
       } else {   
          // canvas-unsupported code here 
          alert('Your browser does not support canvas');
