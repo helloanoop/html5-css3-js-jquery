@@ -203,4 +203,7 @@ Agenda of the training
 ### Session 3 <sup>1h 30m</sup>
 ### Session 4 <sup>1h 45m</sup>
 
+Audio Video
+Web Sockets
+
 

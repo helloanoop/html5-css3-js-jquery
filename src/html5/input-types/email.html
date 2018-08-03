@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <style type="text/css">
+    input[type="email"]:valid{
+      border: solid 1px green;
+    }
+    input[type="email"]:invalid{
+      border: solid 1px red;
+    }
+  </style>
+   <body>
+      <h3>Email Input Type</h3>
+      <label for="primary">Primary address:</label>
+      <input type="email" placeholder="drone@globex.com"
+           pattern=".+@globex.com" size="30" required
+           title="Must be a globex.com email address" />
+   </body>
+</html>
