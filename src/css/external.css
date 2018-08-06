@@ -1,0 +1,12 @@
+div{
+  background-color: blue;
+  color: white;
+}
+
+.foo{
+  font-size: 2em;
+}
+
+.foo span{
+  font-size: 50%;
+}
