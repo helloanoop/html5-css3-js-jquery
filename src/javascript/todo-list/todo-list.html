@@ -1,0 +1,61 @@
+<h3>My Todo list</h3>
+<input type="text" name="" id="todo">
+<button id="add">Add</button>
+<ol id="list"></ol>
+
+<!-- AlexJS -->
+<script type="text/javascript">
+  (function(w) {
+    w.Alex = {};
+
+    Alex.valueById = function(id) {
+      return document.getElementById(id).value;
+    };
+    Alex.setValueById = function(id, value) {
+      document.getElementById(id).value = value;
+    };
+    Alex.createListItem = function(text) {
+      var listNode = document.createElement('li');
+      var textNode = document.createTextNode(text);
+      listNode.appendChild(textNode);
+      return listNode;
+    };
+    Alex.appendChildById = function(id, node) {
+      document.getElementById(id).appendChild(node);
+    };
+  })(window);
+</script>
+<script type="text/javascript">
+  function add() {
+    var currentHTML = document.getElementById("list").innerHTML;
+    var todo = document.getElementById("todo").value;
+    var newItem = "<li>" + todo + "</li>";
+    document.getElementById("list").innerHTML = currentHTML + newItem;
+    document.getElementById("todo").value = '';
+  }
+
+  function add3() {
+    var todo = Alex.valueById("todo");
+    var listNode = Alex.createListItem(todo);
+    Alex.appendChildById('list', listNode);
+    Alex.setValueById('todo', '');
+  }
+
+  function add2() {
+    var todo = document.getElementById("todo").value;
+    var todoItem = document.createElement('li');
+    var todoText = document.createTextNode(todo);
+    todoItem.appendChild(todoText);
+    document.getElementById('list').appendChild(todoItem);
+    document.getElementById("todo").value = '';
+  }
+
+  function handleKeyPress(event){
+    if(event.keyCode == 13){
+      add3();
+    }
+  }
+
+  document.getElementById("add").onclick = add;
+  document.getElementById("todo").onkeypress = handleKeyPress;
+</script>
