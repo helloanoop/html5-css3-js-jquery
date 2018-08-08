@@ -23,7 +23,7 @@
          $(document).ready(function() {
             $('.button').click(function() {
                if (this.id == "add") {
-                  $('#animTarget').addClass("myClass", "fast")
+                  $('#animTarget').addClass("myClass", 500, "easeOutBounce")
                } else {
                $('#animTarget').removeClass("myClass", "fast")
                }

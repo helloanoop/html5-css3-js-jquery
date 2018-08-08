@@ -68,8 +68,26 @@
       <input type="password">
     </form>
 
-    <div>
+    <style type="text/css">
+      .h4 ~ h5 {
+        background-color: purple;
+      }
+
+      h4:hover{
+        background-color: red;
+      }
+
+      h4:second-child{
+        background-color: green;
+      }
+    </style>
+
+    <div class="foo">
+      <h5>All of us have same color</h5>
+      <h4 class="h4">All of us have same color</h4>
       <h4>All of us have same color</h4>
+      <h4>All of us have same color</h4>
+      <h5>All of us have same color</h5>
       <h5>All of us have same color</h5>
       <h6>All of us have same color</h6>
     </div>

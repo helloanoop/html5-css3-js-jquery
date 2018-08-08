@@ -4,10 +4,12 @@ Measurement units
 
 Text
 Fonts
+Background
 Positioning
 Padding
 Margin
 Media Type
+Box Sizing
 
 CSS3
 Colors
@@ -22,43 +24,11 @@ Bootstrap
 
 RequireJS Unit Tests Demo
 
-HTML
-Basics od the Web
-  - URLS
-  - Website
-  - Web Pages
-  - Web Browsers
-  - ISP
-
-Introduction to HTML
-  - What is HTML
-  - Structure of a HTML PAGE
-HTML Tags
-  - Headings
-  - Paragraphs
-  - Line Breaks
-  - Links
-  - Lists
-  - Images
-
-  - Tables
-
-  - Text Formatting
-  - Horizontal Rule
-  - Entities
-  - Forms
-
-
 HTML 5
 Semantic Tags
 Additional Input Controls – Forms
 Video & Audio
 
-
-
-Syntax
-Inclusion - Inline, External, Embedded
-Measurement units - em, rem, px, %
 Colors
   Hex Code  #RRGGBB p{color:#FF0000;}
   Short Hex Code  #RGB  p{color:#6A7;}
