@@ -1,22 +1,26 @@
-DOM
-jQuery
-XMLHttpRequest & Ajax
-jQuery UI
-CSS
+Selectors
+Pseudo Classes
+Measurement units
+
+Text
+Fonts
+Positioning
+Padding
+Margin
+Media Type
+
+CSS3
+Colors
+Gradients
+Text Shadow
+Transforms
+Rounded Corners
+Animations
+
+Responsive design
+Bootstrap
+
 RequireJS Unit Tests Demo
-
-
-
-ToDo
-Node CRUD Examples
-
-Jquery UI Examples
-HTML Remaining
-HTML Exercies
-
-HTML5 Examples
-Chat Server
-
 
 HTML
 Basics od the Web

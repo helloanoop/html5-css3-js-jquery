@@ -1,0 +1,22 @@
+<div id="hello">Hello World</div>
+<script>
+  var elem = document.getElementById('hello');
+  var event = new Event('build');
+
+  // Listen for the event.
+  elem.addEventListener('build', function (e) {
+    console.log("Build event received");
+  });
+
+  // Dispatch the event.
+  elem.dispatchEvent(event);
+
+  // To add more data to the event object, the CustomEvent interface exists and the detail property can be used to pass custom data.
+  var event2 = new CustomEvent('build2', { detail: {foo: "bar"}});
+
+  elem.addEventListener('build2', function (e) {
+    console.log('The detail is: ' + e.detail.foo);
+  });
+
+  elem.dispatchEvent(event2);
+</script>
