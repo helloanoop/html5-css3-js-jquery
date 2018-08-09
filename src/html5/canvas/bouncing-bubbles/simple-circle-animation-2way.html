@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <style type="text/css">
+    body, html{
+      margin: 0;
+      border: 0;
+      padding-bottom: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+    }
+    #canvas{
+      box-sizing: border-box;
+    }
+  </style>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+
+  <body>
+    <canvas id = "canvas"></canvas>
+  </body>
+  <script>
+    var canvas = document.getElementById('canvas');
+    canvas.width = $(window).width();
+    canvas.height = $(window).height();
+    var ctx = canvas.getContext('2d');
+
+    var innerWidth = $(window).width();
+    var innerHeight = $(window).height();
+
+    function Circle(x, y, dx, dy, radius) {
+      console.log("Drawing");
+      this.x = x;
+      this.y = y;
+      this.dx = dx;
+      this.dy = dy;
+      this.radius = radius;
+
+      this.draw = function() {
+        ctx.beginPath();
+        ctx.arc(this.x, this.y, this.radius, 0, Math.PI*2, false);
+        ctx.stroke();
+      }
+
+      this.update = function() {
+        ctx.clearRect(0, 0, innerWidth, innerHeight);
+
+        if(this.x > (innerWidth - this.radius) ||
+          this.x < this.radius) {
+          this.dx = -this.dx;
+        }
+        this.x = this.x + this.dx;
+        this.draw();
+      }
+
+      this.draw();
+    }
+   
+    var circle = new Circle(300, 300, 30, 2, 50);
+
+    function animate() {
+      requestAnimationFrame(animate);
+      circle.update();
+    }
+
+    animate();
+  </script>
+</html>

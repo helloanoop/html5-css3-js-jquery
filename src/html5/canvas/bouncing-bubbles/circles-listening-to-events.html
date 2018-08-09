@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+  <style type="text/css">
+    body, html{
+      margin: 0;
+      border: 0;
+      padding-bottom: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+    }
+    #canvas{
+      box-sizing: border-box;
+    }
+  </style>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+
+  <body>
+    <canvas id = "canvas"></canvas>
+  </body>
+  <script>
+    var canvas = document.getElementById('canvas');
+    canvas.width = $(window).width();
+    canvas.height = $(window).height();
+    var ctx = canvas.getContext('2d');
+
+    var innerWidth = $(window).width();
+    var innerHeight = $(window).height();
+
+    var mouseX = 0;
+    var mouseY = 0;
+    var maxRadius = 25;
+
+    canvas.onmousemove = function(e) {
+      mouseX = e.clientX;
+      mouseY = e.clientY;
+    }
+
+    var colorArray = ['#272F32', '#9DBDC6', '#FF3D2E', '#DAEAEF'];
+    var circleArray = [];
+
+    function Circle(x, y, dx, dy, radius) {
+      this.x = x;
+      this.y = y;
+      this.dx = (Math.random() > 0.5 ? 1 : -1) * dx;
+      this.dy = (Math.random() > 0.5 ? 1 : -1) * dy;
+      this.radius = radius;
+      this.originalRadius = radius;
+
+      var randomColorIndex = Math.floor(Math.random() * colorArray.length);
+      this.color = colorArray[randomColorIndex];
+
+      this.draw = function() {
+        ctx.beginPath();
+        ctx.fillStyle = this.color;
+        ctx.arc(this.x, this.y, this.radius, 0, Math.PI*2, false);
+        ctx.fill();
+        ctx.stroke();
+      }
+
+      // As distance gets closer to 0, increase radius
+      this.update = function() {
+        var mx = Math.abs(mouseX - this.x);
+        var my = Math.abs(mouseY - this.y);
+
+        if(mx < 50 &&
+          my < 50 &&
+          this.radius < maxRadius
+        ) {
+          this.radius +=5;
+        }
+
+        if(
+          mx > 50 &&
+          my > 50 &&
+          (this.radius-5) > this.originalRadius
+        ){
+          this.radius -=5;
+        }
+
+        if(this.x > (innerWidth - this.radius) ||
+          this.x < this.radius) {
+          this.dx = -this.dx;
+        }
+        if(this.y > (innerHeight - this.radius) ||
+          this.y < this.radius) {
+          this.dy = -this.dy;
+        }
+        this.x = this.x + this.dx;
+        this.y = this.y + this.dy;
+        this.draw();
+      }
+
+      this.draw();
+    }
+
+    for (let i = 0; i < 800; i++) {
+      var randomXCoordinate = Math.random() * innerWidth;
+      var randomYCoordinate = Math.random() * innerHeight;
+      var randomRadius = Math.random() * 5;
+      var circle = new Circle(randomXCoordinate, randomYCoordinate, 5, 5, randomRadius);
+      circleArray.push(circle);
+    }   
+
+    function animate() {
+      requestAnimationFrame(animate);
+
+      ctx.clearRect(0, 0, innerWidth, innerHeight);
+      for (let i = 0; i < circleArray.length; i++) {
+        circleArray[i].update()
+      }
+    }
+
+    animate();
+  </script>
+</html>

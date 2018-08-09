@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+   <style>
+      #mycanvas{border:1px solid red;}
+   </style>
+   <body>
+      <canvas id = "mycanvas"></canvas>
+   </body>
+   <script>
+      var canvas  = document.getElementById("mycanvas");
+
+      if (canvas.getContext) {   
+         var ctx = canvas.getContext('2d');   
+         // drawing code here   
+         ctx.beginPath();
+         ctx.arc(75, 75, 50, 0, Math.PI, false); // Outer circle
+         ctx.stroke();
+      } else {   
+         // canvas-unsupported code here 
+         alert('Your browser does not support canvas');
+      }  
+   </script>
+</html>
