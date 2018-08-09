@@ -11,6 +11,8 @@ function TodoView(todo) {
     this.el = el;
     el.appendTo(list);
 
+    el.draggable();
+
     el.find('button#edit-todo').click(function() {
       $(this).parent().addClass("editing");
       $(this).parent().find('input').focus();
