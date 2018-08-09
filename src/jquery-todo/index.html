@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <script src="todo-model.js"></script>
+  <script src="todo-view.js"></script>
+  <style type="text/css">
+    body, html{
+      margin: 15px;
+      border: 0;
+    }
+
+    ol li{
+      margin-bottom: 5px;
+    }
+
+    ol li input{
+    }
+
+    span.todo-name{
+      min-width: 100px;
+      display: inline-block;
+    }
+  </style>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+
+  <body>
+    <h3>Create a Todo</h3>
+    <input type="text" id="todo-textbox">
+    <button id="create-todo">Create</button>
+
+    <h3>Todo List</h3>
+    <ol id="todo-list">
+    </ol>
+  </body>
+  <script type="text/javascript">
+    var todoModel = new TodoModel('http://localhost:5000/api/book');
+    var $todoList = $("ol#todo-list");
+
+    $("#create-todo").click(function() {
+      var todo = $("#todo-textbox").val();
+
+      todoModel
+        .create({
+          name: todo
+        })
+        .then(function(todo){
+          $("#todo-textbox").val('');
+          var view = new TodoView(todo);
+          view.appendToList($todoList);
+        })
+        .catch(function(err) {
+          console.log(err);
+        });
+    });
+
+    todoModel
+      .getAllTodos()
+      .then(function(todos){
+        $.each(todos, function(index, todo) {
+          var view = new TodoView(todo);
+          view.appendToList($todoList);
+        });
+      })
+      .catch(function(err) {
+        console.log(err);
+      });
+  </script>
+</html>
