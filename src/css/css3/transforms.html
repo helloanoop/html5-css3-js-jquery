@@ -2,15 +2,12 @@
    <head>
    
       <style>
-         div {
-            width: 300px;
-            height: 100px;
-            background-color: pink;
-            border: 1px solid black;
-         }
          div#myDiv {
+            width: 200px;
+            height: 200px;
+            background-color: yellow;
             position: relative;
-            left: 300px;
+            /*left: 300px;*/
             /* IE 9 */
             /*-ms-transform: rotate(20deg);*/
             
@@ -23,17 +20,16 @@
             /*transform: skewX(20deg);*/
             /*transform: skewY(20deg);*/
             /*transform: skew(20deg, 20deg);*/
-            /*transform: scale(1.5, 1);*/
-            transform: rotate(0.5turn);
+            /*transform: rotate(0.5turn);*/
+         }
+
+         div#myDiv:hover{
+            transform: translate(100px, 100px);
          }
       </style>
       
    </head>
    <body>
-      <div>
-      Strizly.com.
-      </div>
-      
       <div id="myDiv">
       Strizly.com
       </div>

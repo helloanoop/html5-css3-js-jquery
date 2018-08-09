@@ -5,10 +5,13 @@
     width: 100px;
     height: 100px;
     background: #eee;
+    background: transparent;
     border-radius: 50px;
     position: relative;
     margin: 50px;
     display: inline-block;
+    border: solid 4px lightgrey;
+    box-sizing: border-box;
   }
 
   .spinner:after{
@@ -21,12 +24,12 @@
 
   .spinner-1:after{
     position: absolute;
-    top: 0px;
-    left: 0px;
+    top: -4px;
+    left: -4px;
     box-sizing: border-box;
     border: 4px solid transparent;
     border-top-color: orangered;
-    border-bottom-color: orangered;
+    /*border-bottom-color: orangered;*/
     animation: spinny 2s linear infinite;
   }
 
@@ -47,8 +50,12 @@
     }
 
     50%{
-      transform: rotate(90deg) scale(1.2)
+      transform: rotate(180deg);
     }
+
+    /*50%{
+      transform: rotate(90deg) scale(1.2)
+    }*/
 
     100%{
       transform: rotate(360deg) scale(1);

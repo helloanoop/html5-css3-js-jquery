@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <script src = "https://code.jquery.com/jquery-1.10.2.js"></script>
+  <style>
+  .container{
+    width: 100%;
+    height: 25px;
+    border: solid 1px silver;
+    margin-top: 15px;
+  }
+
+  .bar{
+    background-color: green;
+    width: 0%;
+    height: 25px;
+    transition: width 300ms ease-in-out;
+  }
+  </style>
+  <body>
+    <button data-percent="20%">20%</button>
+    <button data-percent="40%">40%</button>
+    <button data-percent="60%">60%</button>
+    <button data-percent="80%">80%</button>
+    <button data-percent="100%">100%</button>
+    <div class="container">
+      <div class="bar"></div>
+    </div>
+    <script type="text/javascript">
+      $('button').click(function() {
+        $('.bar').css('width', $(this).data('percent'));
+      });
+    </script>
+  </body>
+</html>
