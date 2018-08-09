@@ -12,7 +12,33 @@
       margin-bottom: 5px;
     }
 
+    ol li button{
+      margin-right: 5px;
+    }
+
+    ol li button#save-todo{
+      display: none;
+    }
+
     ol li input{
+      margin-right: 10px;
+      border: solid 1px transparent;
+      outline: none;
+      pointer-events: none;
+    }
+
+    ol li.editing button#save-todo{
+      display: inline-block;
+    }
+    ol li.editing button#edit-todo{
+      display: none;
+    }
+    ol li.editing input{
+      border: solid 1px silver;
+      pointer-events: initial;
+    }
+    ol li.editing input:focus{
+      border: solid 1px black;
     }
 
     span.todo-name{
