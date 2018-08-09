@@ -15,34 +15,43 @@ body {
 <p>Resize the browser window. When the width of this document is 600 pixels or less, the background-color is "lightblue", otherwise it is "lightgreen".</p>
 
 <style type="text/css">
-  .section{
+  .col{
     padding: 20px;
     border: solid 1px black;
-  }
-
-  .col{
     position: relative;
     float: left;
     box-sizing: border-box;
   }
 
-  .col-sm-6{
-    width: 50%;
+  .col-lg-3{
+    width: 25%;
+  }
+
+  @media only screen and (min-width: 601px) and (max-width: 900px) {
+    .col-sm-6{
+      width: 50%;
+    }
   }
 
   @media only screen and (max-width: 600px) {
     .col-xs-12{
-      width: 100% !important;
+      width: 100%;
     }
   }
 </style>
 
 <div class="container">
-  <div class="section col col-xs-12 col-sm-6">
+  <div class="col col-xs-12 col-sm-6 col-lg-3">
     A  
   </div>
-  <div class="section col col-xs-12 col-sm-6">
+  <div class="col col-xs-12 col-sm-6 col-lg-3">
     B
+  </div>
+  <div class="col col-xs-12 col-sm-6 col-lg-3">
+    C
+  </div>
+  <div class="col col-xs-12 col-sm-6 col-lg-3">
+    D
   </div>
 </div>
 

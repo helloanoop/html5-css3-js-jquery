@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <style>
+    .trigger{
+      width: 200px;
+      height: 200px;
+      background-color: grey;
+      border: solid 20px yellow;
+    }
+    .box{
+      display: inline-block;
+      background-color: lightgreen;
+      width: 200px;
+      height: 200px;
+      transition: transform 300ms ease-in-out;
+      pointer-events: none;
+    }
+
+    .trigger:hover .box{
+      transform: translate(200px, 150px) rotate(20deg);
+    }
+  </style>
+  <body>
+    <div class="trigger">
+      <div class="box"></div>
+    </div>
+  </body>
+</html>

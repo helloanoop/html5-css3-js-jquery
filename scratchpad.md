@@ -1,26 +1,59 @@
-Selectors
-Pseudo Classes
-Measurement units
-
-Text
-Fonts
-Background
-Positioning
-Padding
-Margin
-Media Type
-Box Sizing
-
 CSS3
 Colors
 Gradients
 Text Shadow
-Transforms
 Rounded Corners
+Transforms
 Animations
 
-Responsive design
-Bootstrap
+
+1. Instill with Life
+2. Having the appearance of movement
+
+1. Transition Property
+2. Animation property + Keyframes
+
+.element{
+  tranistion: [property] [duration] [ease] [delay];
+}
+
+Ex: {
+  transition: opacity 300ms ease-in-out 1s;
+}
+
+Animatable properties
+font-size
+background-color
+width
+left
+
+Non Animatable properties
+position
+font-family
+display
+
+Performant Properties
+position:
+scale:
+rotation:
+opacity:
+
+Triggering
+1. hover pseudo class
+2. Class changes
+
+Keyframes
+@keyframes [name] {
+  from {
+    [styles]
+  }
+  to {
+    [styles]
+  }
+}
+.element{
+  animation: [name] [duration] [ease] [delay] [iteration-count] [direction] [fill-mode] [play-state]
+}
 
 RequireJS Unit Tests Demo
 

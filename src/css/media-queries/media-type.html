@@ -11,6 +11,9 @@
      
       @media screen {
          body { font-size: 12pt }
+         .hidden-screen{
+            display: none;
+         }
       }
 
       @media screen, print {
@@ -23,4 +26,5 @@
 <body>
    This will be printed.
    <div class="hidden-print">This wont be printed</div>   
+   <div class="hidden-screen">This wont be seen in screen</div>   
 </body>
