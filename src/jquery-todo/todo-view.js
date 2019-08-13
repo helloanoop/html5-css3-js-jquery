@@ -5,7 +5,7 @@ function TodoView(todo) {
   this.appendToList = function(list){
     var self = this;
 
-    var input = "<input value='" + this.todo.name + "'>";
+    var input = "<input value='" + this.todo.title + "'>";
     var buttons = "<button id='edit-todo'>Edit</button><button id='save-todo'>Save</button>";
     var el = $("<li data-id='" + this.todo.id + "'>" + input + buttons + "</li>");
     this.el = el;
@@ -21,11 +21,11 @@ function TodoView(todo) {
     el.find('button#save-todo').click(function() {
       var todoModel = new TodoModel('http://localhost:5000/api/book');
       todoModel.save($(self.el).data("id"), {
-        name: self.el.find('input').val()
+        title: self.el.find('input').val()
       })
       .then(function(data) {
         $(self.el).removeClass("editing");
-        $(self.el).find('input').val(data.name);
+        $(self.el).find('input').val(data.title);
       })
       .catch(function(err) {
         console.log(err);

@@ -1,0 +1,30 @@
+<script>
+  var CounterFactory = function() {
+    var count = 0;
+
+    return function() {
+      this.set = function(val) {
+        count = val;
+      }
+
+      this.get = function() {
+        return count;
+      }
+    }
+  }
+
+  var createCounter = function() {
+    var C = CounterFactory();
+    return new C();
+  }
+
+  var c1 = createCounter();
+  c1.set(2);
+  console.log(c1.get());
+
+  var c2 = createCounter();
+  c2.set(3);
+  console.log(c2.get());
+  console.log(c1.get());
+  
+</script>

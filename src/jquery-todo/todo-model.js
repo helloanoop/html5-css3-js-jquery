@@ -4,8 +4,8 @@ function TodoModel(url) {
   this.getAllTodos = function() {
     var self = this;
     return new Promise(function(resolve, reject) {
-      $.get(self.url, function(data) {
-        return resolve(data.data);
+      $.get(self.url, function(response) {
+        return resolve(response.data);
       }).fail(function(err) {
         return reject(err);
       });

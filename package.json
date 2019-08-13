@@ -3,10 +3,14 @@
   "version": "1.0.0",
   "description": "HTML5, CSS3, JS & jQuery examples",
   "dependencies": {
+    "@feathersjs/express": "^1.3.1",
+    "@feathersjs/feathers": "^3.3.1",
     "body-parser": "^1.9.0",
-    "cors": "^2.4.2",
+    "cors": "^2.8.5",
     "express": "^4.9.7",
+    "feathers-nedb": "^5.0.1",
     "http-server": "^0.11.1",
-    "lodash": "^4.17.5"
+    "lodash": "^4.17.5",
+    "nedb": "^1.8.0"
   }
 }

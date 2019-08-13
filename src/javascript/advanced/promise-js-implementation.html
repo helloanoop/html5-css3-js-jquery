@@ -1,0 +1,49 @@
+<script>
+  var MyPromise = function(callback){
+    var successThens = [];
+    var errorCatchs = [];
+    var resolver = function(res) {
+      successThens.forEach(function(cb) {
+        cb(res);
+      });
+    };
+    var rejecter = function() {
+    }
+    callback(resolver, rejecter);
+    var _promise = {
+      then: function(_successThen) {
+        successThens.push(_successThen);
+        return _promise;
+      },
+      catch: function(_errorCatch) {
+        errorCatchs.push(_errorCatch);
+      }
+    };
+
+    return _promise;
+  }
+
+  var p = new MyPromise(function(resolve, reject) {
+    console.log("Inside Promise");
+    setTimeout(function() {
+      console.log("Resolving Promise");
+      resolve(3);
+    }, 500);
+  });
+
+  p
+  .then(function(res) {
+    console.log("Success");
+    console.log(res);
+  })
+  .catch(function(err) {
+    console.log("Error");
+    console.log(err);
+  });
+</script>function(resolve, reject) {
+    console.log("Inside Promise");
+    setTimeout(function() {
+      console.log("Resolving Promise");
+      resolve(3);
+    }, 500);
+  }

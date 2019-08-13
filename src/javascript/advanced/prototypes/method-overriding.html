@@ -1,0 +1,32 @@
+<script>
+  function Person(name) {
+    this.name = name;
+  };
+
+  Person.prototype.greet = function() {
+    console.log("Hello " + this.name);
+  };
+
+  var person1 = new Person("Ramesh");
+  var person2 = new Person("Shwetha");
+
+  person1.greet = function() {
+    console.log("Overrided");
+  };
+
+  person1.greet();
+  person2.greet();
+
+  // Another approach
+  var proto = {
+    greet: function() {
+      console.log("Hello " + this.name);
+    }
+  };
+  var person3 = Object.create(proto);
+  person3.name = 'Simran';
+  person3.greet();
+
+  // Another way of overriding
+  // var person3 = _.extend({}, proto, {name: 'Simran'});
+</script>
