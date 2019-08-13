@@ -1,9 +1,12 @@
 function TodoView(todo) {
   this.todo = todo;
   this.el = null;
+  this.list = null;
 
   this.appendToList = function(list){
     var self = this;
+
+    this.list = list;
 
     var input = "<input value='" + this.todo.title + "'>";
     var buttons = "<button id='edit-todo'>Edit</button><button id='save-todo'>Save</button>";
@@ -19,7 +22,7 @@ function TodoView(todo) {
     });
 
     el.find('button#save-todo').click(function() {
-      var todoModel = new TodoModel('http://localhost:5000/api/book');
+      var todoModel = new TodoModel('http://localhost:5000/api/todo');
       todoModel.save($(self.el).data("id"), {
         title: self.el.find('input').val()
       })

@@ -18,9 +18,7 @@ function TodoModel(url) {
       $.ajax({
         url: self.url,
         method: "POST",
-        data: {
-          name: params.name
-        }
+        data: params
       })
       .done(function(data) {
         return resolve(data);
@@ -37,9 +35,7 @@ function TodoModel(url) {
       $.ajax({
         url: self.url + '/' + id,
         method: "PUT",
-        data: {
-          name: params.name
-        }
+        data: params
       })
       .done(function(data) {
         return resolve(data);
