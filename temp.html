@@ -1,0 +1,39 @@
+<input id="todo"></input>
+<button id="add">Add</button>
+
+<ol id="todo-list">
+</ol>
+
+<script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+
+<script>
+  var $add = $("#add");
+  var $list = $("#todo-list");
+  var $input = $("#todo");
+
+  var addTodoToList = function(todo) {
+    $list.append("<li>" + todo + "</li>");
+  };
+
+  $.get("http://localhost:5000/api/todo", function(response) {
+    $(response.data).each(function(index, value) {
+      addTodoToList(value.title);
+    });
+  });
+
+  var addTodo = function() {
+    var todo = $input.val();
+    // $list.add("li").text(todo);
+    // $list.append("<li>" + todo + "</li>");
+    $input.val('');
+    $input.focus();
+  }
+
+  $input.keypress(function(e) {
+    if(e.keyCode === 13) {
+      addTodo();
+    }
+  });
+  $add.click(addTodo);
+</script>

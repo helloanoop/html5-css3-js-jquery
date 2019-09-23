@@ -6,7 +6,7 @@ const NeDB = require('nedb');
 const service = require('feathers-nedb');
 
 const db = new NeDB({
-  filename: './db-data/databasse.nedb',
+  filename: './db-data/database.nedb',
   autoload: true
 });
 
@@ -40,7 +40,6 @@ app.configure(express.rest());
 // Connect to the db, create and register a Feathers service.
 app.use('/api/todo', service({
   Model: db,
-  id: 'id',
   paginate: {
     default: 5,
     max: 100
