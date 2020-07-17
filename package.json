@@ -10,7 +10,7 @@
     "express": "^4.9.7",
     "feathers-nedb": "^5.0.1",
     "http-server": "^0.11.1",
-    "lodash": "^4.17.5",
+    "lodash": "^4.17.19",
     "nedb": "^1.8.0"
   }
 }
